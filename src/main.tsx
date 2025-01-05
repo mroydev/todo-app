@@ -10,8 +10,16 @@ createRoot(document.getElementById('root')!).render(
     <KindeProvider
       clientId="7540e6aab24c4f25919d6bee6f5358ce"
       domain="https://mroydev.kinde.com"
-      redirectUri="http://localhost:5173"
-      logoutUri="http://localhost:5173"
+      redirectUri={
+        process.env.NODE_ENV === 'production'
+          ? 'https://todo-app-mroy.vercel.app/'
+          : 'http://localhost:5173'
+      }
+      logoutUri={
+        process.env.NODE_ENV === 'production'
+          ? 'https://todo-app-mroy.vercel.app/'
+          : 'http://localhost:5173'
+      }
     >
       <TodosContextProvider>
         <App />
