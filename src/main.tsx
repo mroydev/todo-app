@@ -12,12 +12,12 @@ createRoot(document.getElementById('root')!).render(
       domain="https://mroydev.kinde.com"
       redirectUri={
         process.env.NODE_ENV === 'production'
-          ? 'https://todo-app-mroy.vercel.app/'
+          ? 'https://todo-app-mroy.vercel.app'
           : 'http://localhost:5173'
       }
       logoutUri={
         process.env.NODE_ENV === 'production'
-          ? 'https://todo-app-mroy.vercel.app/'
+          ? 'https://todo-app-mroy.vercel.app'
           : 'http://localhost:5173'
       }
     >
